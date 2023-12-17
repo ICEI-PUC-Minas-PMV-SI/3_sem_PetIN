@@ -16,6 +16,7 @@ main section {
 }
 
 .sctn-about-us {
+  z-index: 1000;
   width: 60%;
   margin: 1.5rem;
   margin-bottom: 5rem;
@@ -50,13 +51,15 @@ main h1 {
 
 .sctn-reports .cards {
   display: flex;
-  background-color: white;
-  height: 15rem;
+  width: 35rem;
 }
 
-.sctn-partners .card {
-  width: 40%;
+.sctn-reports .card {
+  width: 15rem;
+  height: 15rem;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .sctn-reports .card .header {
@@ -66,16 +69,9 @@ main h1 {
   margin-left: 1.5rem;
 }
 
-.sctn-reports .card .header .avatar {
-  background-color: black;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-}
-
 .sctn-reports .card .body {
   padding: 1rem 1rem 1.5rem 1rem;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .sctn-reports .card .header h4 {
@@ -89,14 +85,20 @@ main h1 {
 
 .sctn-partners {
   width: 30rem;
-  margin: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.sctn-partners ul {
+.sctn-partners .card {
   display: flex;
   flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.sctn-partners .card ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .sctn-partners .rectangle {
@@ -111,9 +113,7 @@ main h1 {
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
-
 }
 
 @media screen and (max-width: 575px) {
-
 }
