@@ -1,0 +1,63 @@
+<div class="partners">
+  <div class="partners-container">
+    <h2>
+      Seja parceiro desta comunidade<br>
+      cheia de amor para dar!
+    </h2>
+    <div class="row">
+      <div class="left-container">
+        <div class="card column partners-article">
+          <h3>Como ser um parceiro</h3>
+          <article>
+            <p>O projeto PetIN tem como objetivo conectar caẽs e gatos com seu futuro companheiro. Temos parceiros que
+              nos
+              ajudam a cuidar do nosso pet, como médicos veterinários, marcas de produto voltadas para animais e ONG’s
+              que
+              podem servir como abrigo para esses animais.</p>
+            <p>
+              Para ter parceiria conosco, preencha o formulário para que possamos analisar a sua proposta!
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="right-container">
+        <span><img src="../../../assets/cat-dog-partners.svg" alt="petin-logo" width="250px"></span>
+      </div>
+    </div>
+    <div class="column">
+      <form>
+        <div class="card column">
+          <h3>Formulário de Parceiria</h3>
+          <div class="form-input">
+            <!-- [formGroup]="form" -->
+
+            <label for="tipo">Tipo de organização</label>
+            <div>
+              <input type="radio" />
+              <span>ONG</span>
+              <input type="radio">
+              <span>Empresa</span>
+            </div>
+            <label for="razao-social">Razão Social</label>
+            <input id="razao-social" type="text" placeholder="Razão Social" required />
+            <label for="cnpj">CNPJ</label>
+            <input id="cnpj" type="text" placeholder="CNPJ" required />
+            <label for="email">E-mail</label>
+            <input id="email" type="email" formControlName="email" class="form-control" placeholder="E-mail" required />
+            <!-- <div style="font-size: 12px; color: red;" class="alert alert-danger">Campo Inválido</div> -->
+            <!-- [hidden]="this.form.get('email')?.valid === true" -->
+            <label for="celphone">Celular</label>
+            <input type="text" class="form-control" placeholder="Telefone" required />
+            <label for="text">Texto</label>
+            <textarea type="text" class="form-control"
+              placeholder="Conte aqui uma breve descrição sobre sua organização/empresa" required></textarea>
+            <!-- <div style="font-size: 12px; color: red;" class="alert alert-danger">Campo Inválido</div> -->
+            <!-- [hidden]="this.form.get('password')?.valid === true" -->
+            <button class="btn" type="submit">Enviar</button>
+            <!-- <button [disabled]="!form.valid" class="btn" type="submit" (click)="onSubmit($event)">Entrar</button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

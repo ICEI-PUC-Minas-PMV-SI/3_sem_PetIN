@@ -1,0 +1,27 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.form-input input[type=text], input[type=password], input[type=email] {
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+  outline: 1px solid #42A948;
+}
+
+.ng-invalid:not(form) .form-control  {
+  border-left: 5px solid #a94442; /* red */
+  outline: 1px solid #a94442;
+}

@@ -1,0 +1,33 @@
+<div class="login">
+  <div class="login-container column">
+    <div class="row">
+      <div class="left-container dark-blue-font">
+        <h2>
+          Faça login<br> e
+          encontre o<br>seu pet!
+        </h2>
+        <span><img src="../../../assets/cat-dog-login.svg" alt="petin-logo" width="250px"></span>
+      </div>
+      <div class="right-container">
+        <span><img src="../../../assets/simple-logo.svg" alt="petin-logo" width="250px"></span>
+        <form>
+          <div class="card">
+            <div class="form-input" [formGroup]="form">
+              <label for="email">E-mail</label>
+              <input id="email" type="email" formControlName="email" class="form-control" placeholder="E-mail" required />
+              <div style="font-size: 12px; color: red;" [hidden]="this.form.get('email')?.valid === true"
+                class="alert alert-danger">Campo Inválido</div>
+              <label for="password">Senha</label>
+              <input id="password" type="password" formControlName="password" class="form-control" placeholder="Senha"
+                required />
+              <div style="font-size: 12px; color: red;" [hidden]="this.form.get('password')?.valid === true"
+                class="alert alert-danger">Campo Inválido</div>
+              <button [disabled]="!form.valid" class="btn" type="submit" (click)="onSubmit($event)">Entrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p style="color: var(--font-dark-grey);">Não possui conta? <a href="/signup">Cadastre-se</a></p>
+  </div>
+</div>

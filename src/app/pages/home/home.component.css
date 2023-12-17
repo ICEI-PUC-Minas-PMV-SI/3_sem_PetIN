@@ -1,0 +1,119 @@
+a {
+  color: var(--font-grey);
+}
+
+main {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+main section {
+  color: var(--font-grey);
+}
+
+.sctn-about-us {
+  width: 60%;
+  margin: 1.5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+main h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+.sctn-about-us span {
+  font-weight: bold;
+  color: var(--medium-blue);
+}
+
+.sctn-reports {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sctn-reports .reports-info {
+  width: 40%;
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.sctn-reports .report-cards {
+  width: 50%;
+}
+
+.sctn-reports .cards {
+  display: flex;
+  background-color: white;
+  height: 15rem;
+}
+
+.sctn-partners .card {
+  width: 40%;
+  margin: 1rem;
+}
+
+.sctn-reports .card .header {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  margin-left: 1.5rem;
+}
+
+.sctn-reports .card .header .avatar {
+  background-color: black;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.sctn-reports .card .body {
+  padding: 1rem 1rem 1.5rem 1rem;
+  text-align: justify;
+}
+
+.sctn-reports .card .header h4 {
+  color: var(--font-dark-grey);
+  font-weight: 600;
+}
+
+.sctn-reports .card .info {
+  margin-left: 1rem;
+}
+
+.sctn-partners {
+  width: 30rem;
+  margin: 1.5rem;
+}
+
+.sctn-partners ul {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.sctn-partners .rectangle {
+  width: 6rem;
+  height: 3rem;
+  background-color: var(--orange);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}

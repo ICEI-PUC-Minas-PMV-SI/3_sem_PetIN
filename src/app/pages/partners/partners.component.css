@@ -1,0 +1,92 @@
+.partners {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--blue);
+  height: auto;
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 180vh;
+  font-weight: bold;
+}
+
+.partners-container h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.partners-container .center-container {
+  display: flex;
+  justify-content: row;
+}
+
+.partners-container .partners-article {
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+}
+
+
+.partners-container .partners-article h1, h2, h3, h4 {
+  color: var(--dark-blue);
+  margin-top: -0.5rem;
+}
+.partners-container .partners-article p {
+  margin-top: 1rem;
+  color: var(--font-dark-grey);
+  font-size: 14px;
+  width: 18rem;
+  font-weight: normal;
+}
+
+.card {
+  width: 20rem;
+  height: 34rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.card h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+
+.card .btn {
+  width: 100%;
+  background-color: var(--orange);
+}
+
+.card textarea {
+  height: 6rem;
+}
+
+.partners-container h1 {
+  color: rgb(71, 201, 71);
+  text-align: center;
+}
+
+.partners p {
+  color: white;
+}
+
+.partners button {
+  margin-top: 20px;
+  background-color: rgb(71, 201, 71);
+  color: white;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.partners button:hover {
+  cursor: pointer;
+}

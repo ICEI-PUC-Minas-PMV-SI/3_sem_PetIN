@@ -1,0 +1,80 @@
+:root {
+  --blue: #7acfdf;
+  --medium-blue: #3cacc3;
+  --dark-blue: #2C7E8E;
+  --orange: #f47645;
+  --off-white: rgb(246, 246, 246);
+  --font-grey: rgb(117, 117, 117);
+  --font-dark-grey: rgb(69, 69, 69);
+  --input-border: #757575;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900);
+html,
+body,
+html * {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: var(--off-white);
+  color: var(--font-dark-grey);
+  z-index: 10;
+}
+
+h1 h2 h3 h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+
+.btn {
+  border-radius: 5px;
+  width: auto;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.card {
+  display: flex;
+  padding: 1.5rem;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.medium-blue-font {
+  color: var(--medium-blue);
+}
+
+.blue-font {
+  color: var(--blue);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}

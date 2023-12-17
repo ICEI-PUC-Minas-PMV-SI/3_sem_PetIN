@@ -1,0 +1,37 @@
+.advertisements {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisements .first-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.advertisements .search-container {
+  display: flex;
+  flex-direction: column;
+}
+.advertisements .search-container label {
+  text-align: left;
+}
+
+.advertisements .search-container h3 {
+  color: var(--dark-blue);
+  font-size: 2rem;
+}
+
+.advertisements .search-container input {
+  color: white;
+  background-color: var(--orange);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.advertisements .search-container .card {
+  color: white;
+  background-color: var(--orange);
+  font-size: 1rem;
+  padding: 1rem;
+}

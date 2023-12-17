@@ -1,0 +1,41 @@
+<div class="signup">
+  <div class="signup-container">
+    <div class="left-container medium-blue-font">
+      <h2>
+        Cadastre-se<br>
+        para achar o<br>seu amigão!
+      </h2>
+      <span><img src="../../../assets/cat-dog-signup.svg" alt="petin-logo" width="250px"></span>
+    </div>
+    <div class="right-container">
+      <span><img src="../../../assets/simple-logo.svg" alt="petin-logo" width="250px"></span>
+      <form>
+        <div class="card">
+          <div class="form-input" [formGroup]="form">
+            <label for="name">Nome completo</label>
+            <input id="name" type="name" formControlName="name" class="form-control" placeholder="Nome completo"
+              required />
+            <label for="birthdate">Data de nascimento</label>
+            <input id="birthdate" type="birthdate" formControlName="birthdate" class="form-control"
+              placeholder="Data de nascimento" required />
+            <label for="cpf">CPF/label></label>
+            <input id="cpf" type="cpf" formControlName="cpf" class="form-control" placeholder="Cpf" required />
+            <label for="rg">RG/label></label>
+            <input id="rg" type="rg" formControlName="rg" class="form-control" placeholder="RG" required />
+            <label for="email">E-mail</label>
+            <input id="email" type="email" formControlName="email" class="form-control" placeholder="E-mail" required />
+            <label for="password">Senha</label>
+            <input id="password" type="password" formControlName="password" class="form-control" placeholder="Senha"
+              required />
+            <label for="confirmPassword">Confirmar senha</label>
+            <input id="confirmPassword" type="confirmPassword" formControlName="confirmPassword" class="form-control"
+              placeholder="Confirmar senha" required />
+            <div style="font-size: 12px; color: red;" [hidden]="this.form.get('password')?.valid === true"
+              class="alert alert-danger">Campo Inválido</div>
+            <button [disabled]="!form.valid" class="btn" type="submit" (click)="onSubmit($event)">Entrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

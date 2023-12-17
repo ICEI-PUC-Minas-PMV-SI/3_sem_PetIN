@@ -1,0 +1,88 @@
+<div [formGroup]="form">
+  <label *ngIf="fieldLabel != null && fieldLabel.length > 0" for="{{fieldName}}">{{fieldLabel}}{{getRequiredValue() ? '*' : ''}}</label>
+
+  <input *ngIf="fieldType !== 'number' && fieldType !== 'date' && fieldType !== 'currency'
+  && fieldType !== 'select'  && fieldType !== 'selectFunction' && fieldType !== 'select-async'
+  && fieldType !== 'percentage' && fieldType !== 'ng-select'"
+    (blur)="onBlur($event)" (change)="onChange($event)" (keyup)="onKeyup($event)"
+    class="form-control"
+    formControlName="{{fieldName}}"
+    type="{{fieldType}}"
+    maxlength="{{fieldMaxSize}}"
+    placeholder="{{fieldPlaceHolder}}"
+    [readOnly]="this.fieldReadOnly"
+    [disabled]="disabled"
+    [attr.disabled]="(this.disabled || this.fieldReadOnly) ? '' : null"
+    [hidden]="hidden"
+    [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && !form.controls[fieldName].pristine}">
+
+  <input *ngIf="fieldType === 'date'"
+    (blur)="onBlur($event)" (change)="onChange($event)"
+    class="form-control"
+    formControlName="{{fieldName}}"
+    type="date"
+    max="9999-12-31"
+    placeholder="{{fieldPlaceHolder}}"
+    [readOnly]="this.fieldReadOnly"
+    [hidden]="hidden"
+    [attr.disabled]="(this.disabled || this.fieldReadOnly) ? '' : null"
+    [disabled]="disabled"
+     [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && form.controls[fieldName].touched}">
+
+  <input *ngIf="fieldType === 'number'"
+    (blur)="onBlur($event)" (change)="onChange($event)"
+    class="form-control"
+    type="text" inputMode="numeric"
+    currencyMask
+    formControlName="{{fieldName}}"
+    placeholder="{{fieldPlaceHolder}}"
+    [readOnly]="this.fieldReadOnly"
+    [hidden]="hidden"
+    [disabled]="disabled"
+     [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && !form.controls[fieldName].pristine}">
+
+  <input *ngIf="fieldType === 'currency'"
+    (blur)="onBlur($event)" (change)="onChange($event)"
+    class="form-control"
+    type="text" inputMode="numeric"
+    currencyMask
+    formControlName="{{fieldName}}"
+    placeholder="{{fieldPlaceHolder}}"
+    [readOnly]="this.fieldReadOnly"
+    [hidden]="hidden"
+    [disabled]="disabled"
+     [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && !form.controls[fieldName].pristine}">
+
+    <input *ngIf="fieldType === 'percentage'"
+      (blur)="onBlur($event)" (change)="onChange($event)"
+      class="form-control"
+      type="text" inputMode="numeric"
+      currencyMask
+      formControlName="{{fieldName}}"
+      placeholder="{{fieldPlaceHolder}}"
+      [readOnly]="this.fieldReadOnly"
+      [hidden]="hidden"
+      [disabled]="disabled"
+       [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && !form.controls[fieldName].pristine}">
+
+  <select *ngIf="fieldType === 'select'"
+    class="form-control"
+    formControlName="{{fieldName}}"
+    (change)="selectChanged($event)"
+    [hidden]="hidden"
+    [attr.disabled]="(this.disabled || this.fieldReadOnly) ? '' : null"
+     [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && form.controls[fieldName].touched}">
+    <option *ngFor="let option of fieldOptionsList" value="{{option[optionValue]}}">{{option[optionText]}}</option>
+  </select>
+
+  <select *ngIf="fieldType === 'select-async'"
+    class="form-control"
+    formControlName="{{fieldName}}"
+    (change)="selectChanged($event)"
+    [hidden]="hidden"
+    [disabled]="this.disabled || this.fieldReadOnly"
+     [ngClass]="{'form-control-invalid': !form.controls[fieldName].valid  && form.controls[fieldName].touched }">
+    <option *ngFor="let option of fieldOptionsListAsync | async" value="{{option[optionValue]}}">{{option[optionText]}}</option>
+  </select>
+  <i class="error" *ngIf="!form.controls[fieldName].valid && form.controls[fieldName].touched "> {{fieldValidationMessage}}.</i>
+</div>

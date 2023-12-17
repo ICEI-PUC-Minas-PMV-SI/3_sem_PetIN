@@ -1,0 +1,54 @@
+.signup {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 130vh;
+}
+
+.signup-container {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+
+.signup-container h2 {
+  font-size: 2rem;
+}
+
+.card {
+  width: 20rem;
+  height: 31rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.card .btn {
+  width: 100%;
+  background-color: var(--orange);
+}
+
+.signup-container h1 {
+  color: rgb(71, 201, 71);
+  text-align: center;
+}
+
+.signup p {
+  color: white;
+}
+
+.signup button {
+  margin-top: 20px;
+  background-color: rgb(71, 201, 71);
+  color: white;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.signup button:hover {
+  cursor: pointer;
+}
