@@ -1,18 +1,20 @@
 # Petin
 
 
-A **Petin** veio para ajudar a conectar pessoas com o seu futuro amigão! O projeto é fruto de um trabalho de faculdade para a PUC Minas.
+A **Petin** veio para ajudar a conectar pessoas com o seu futuro amigão! O projeto é fruto da disciplina "Projeto: Design Centrado no Usuário" do curso de bacharelado em Sistemas de Informação da Pontifícia Universidade Católica de Minas Gerais.
+
+## Integrantes
+
+- Bianka Dias Tenório D’Albuquerque
+- Guilherme Campos Bayerl Coelho
+- Guilherme Monteiro Barbosa de Jesus
+- Júlia Souza de Rezende
+- Michael Henrique Ferreira Dias
+- Sarah Sousa Saud
+
 
 ## Instruções
-Para rodar a aplicação você precisará ter o Node.js baixado na sua máquina na versão LTS (de preferência a versão mais recente, que no momento é versão 18).
+Para rodar a aplicação você precisará ter o Node.js baixado na sua máquina na versão LTS (de preferência a versão mais recente, que no momento é versão 18). Logo em seguida rode os comandos: ```npm install && npm start``` e sua aplicação rodará localmente na porta 4200.
 
 ## Estrutura
-**Backend:** será responsável por conter toda a regra de negócio da aplicação e conexão com o banco de dados, responderá o frontend os dados necessários que ele precisa
-
-**Frontend:** será responsável por toda interface gráfica da aplicação e requisitará o backend para buscar dados e informações relevantes para que sejam mostrados de forma amigável
-
----
-
-## **[WIP]** A plataforma ainda está em desenvolvimento.
-
-Ainda estamos procurando um jeito de manter as coisas no lugar! Logo mais a aplicação estará disponível em uma versão estável.
+O projeto foi feito em Angular e todas as informações ficarão salvar no próprio navegador via localStorage/sessionStorage.
