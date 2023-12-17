@@ -17,4 +17,4 @@ A **Petin** veio para ajudar a conectar pessoas com o seu futuro amigão! O proj
 Para rodar a aplicação você precisará ter o Node.js baixado na sua máquina na versão LTS (de preferência a versão mais recente, que no momento é versão 18). Logo em seguida rode os comandos: ```npm install && npm start``` e sua aplicação rodará localmente na porta 4200.
 
 ## Estrutura
-O projeto foi feito em Angular e todas as informações ficarão salvar no próprio navegador via localStorage/sessionStorage.
+O projeto foi feito em Angular e todas as informações ficarão salvas no próprio navegador via localStorage/sessionStorage.
