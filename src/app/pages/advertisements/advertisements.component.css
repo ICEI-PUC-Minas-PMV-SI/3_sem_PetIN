@@ -2,16 +2,27 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+  background-color: var(--blue);
+}
+
+.advertisements h1 {
+  color: #fff;
 }
 
 .advertisements .first-container {
   display: flex;
   flex-direction: row;
+  margin-left: 2rem;
 }
 
 .advertisements .search-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 15rem;
+  width: 10rem;
+  padding: 1rem;
 }
 .advertisements .search-container label {
   text-align: left;
@@ -27,6 +38,8 @@
   background-color: var(--orange);
   font-size: 1rem;
   padding: 1rem;
+  margin-top: 0.5rem;
+  border: none;
 }
 
 .advertisements .search-container .card {
@@ -35,3 +48,58 @@
   font-size: 1rem;
   padding: 1rem;
 }
+
+
+.card-list {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.card .card-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.card .card-content strong {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .card-content p {
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.card-list .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 15rem;
+  margin-left: 1.5rem;
+}
+
+.first-container .card-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.first-container .card-list .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 15rem;
+  margin-left: 2.5rem;
+}
+

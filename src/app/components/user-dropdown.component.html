@@ -1,7 +1,5 @@
-<!-- user-dropdown.component.html -->
 <div class="user-container" (click)="toggleDropdown()">
-  <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture" #profilePicture>
-
+  <img src="../../../assets/user_logo.png" width="45" alt="Profile Picture" class="profile-picture" #profilePicture>
   <div class="dropdown" *ngIf="isOpen" #dropdown>
     <ul>
       <li><a href="/meus-anuncios">Meus Anúncios</a></li>

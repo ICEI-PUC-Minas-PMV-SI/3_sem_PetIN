@@ -17,7 +17,16 @@ export class AuthService {
     if (userLogged?.email && userLogged.password) {
       this.isLogged = true;
     }
-    console.log(this.isLogged);
+    localStorage.setItem(
+      'advertisements',
+      JSON.stringify([
+        { type: 'Cachorro', sex: 'Macho', size: 'Pequeno', name: 'Bulba', age: "0 anos e 5 meses" },
+        { type: 'Cachorro', sex: 'Macho', size: 'Grande', name: 'Dante', age: "5 anos e 2 meses" },
+        { type: 'Cachorro', sex: 'Macho', size: 'Médio', name: 'Alex', age: "10 anos e 0 meses" },
+        { type: 'Cachorro', sex: 'Macho', size: 'Médio', name: 'Alex', age: "10 anos e 0 meses" },
+        { type: 'Cachorro', sex: 'Macho', size: 'Médio', name: 'Alex', age: "10 anos e 0 meses" },
+      ])
+    );
   }
 
   canActivate(

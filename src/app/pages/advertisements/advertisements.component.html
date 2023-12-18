@@ -7,38 +7,56 @@
         <div class="search-container">
           <h3>Pesquisa</h3>
           <label for="type">Tipo</label>
-          <select name="type" id="type"></select>
+          <select name="type" id="type">
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+          </select>
           <label for="sex">Sexo</label>
-          <select name="sex" id="sex"></select>
+          <select name="sex" id="sex">
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+          </select>
           <label for="size">Tamanho</label>
-          <select name="size" id="size"></select>
-          <input class="btn" type="submit" value="Pesquisar">
+          <select name="size" id="size">
+            <option value="Pequeno">Pequeno</option>
+            <option value="Médio">Médio</option>
+            <option value="Grande">Grande</option>
+          </select>
+          <input class="btn" type="submit" value="Pesquisar" (click)="filter()">
         </div>
       </div>
     </form>
+    <ul class="card-list" *ngIf="advertisements.length">
+      <span *ngFor="let advertisement of this.advertisements; let i = index;">
+        <li class="card" *ngIf="i < 2">
+          <img src="../../../assets/dog1.png" width="200" height="200">
+          <div class="card-container">
+            <div class="card-content">
+              <strong>{{advertisement.name}}</strong>
+              <p>{{advertisement.type}}, {{advertisement.sex}}</p>
+              <p>{{advertisement.size}}</p>
+              <p>Idade: {{advertisement.age}}</p>
+            </div>
+            <img src="../../../assets/arrow-right.svg" width="1rem" height="1rem">
+          </div>
+        </li>
+      </span>
+    </ul>
   </div>
-  <ul class="first-cards">
-    <li class="card">
-      <img src="">
-      <strong>pet name</strong>
-      <p>type/sex</p>
-      <p>size</p>
-      <p>age</p>
-    </li>
-    <li class="card">
-      <img src="">
-      <strong>pet name</strong>
-      <p>type/sex</p>
-      <p>size</p>
-      <p>age</p>
-    </li>
+  <ul class="card-list" *ngIf="advertisements.length">
+    <span *ngFor="let advertisement of this.advertisements; let i = index;">
+      <li class="card" *ngIf="i >= 2">
+        <img src="../../../assets/dog1.png" width="200" height="200">
+        <div class="card-container">
+          <div class="card-content">
+            <strong>{{advertisement.name}}</strong>
+            <p>{{advertisement.type}}, {{advertisement.sex}}</p>
+            <p>{{advertisement.size}}</p>
+            <p>Idade: {{advertisement.age}}</p>
+          </div>
+          <img src="../../../assets/arrow-right.svg" width="1rem" height="1rem">
+        </div>
+      </li>
+    </span>
   </ul>
 </div>
-<ul class="card-list">
-  <li class="card">
-  </li>
-  <li class="card">
-  </li>
-  <li class="card">
-  </li>
-</ul>

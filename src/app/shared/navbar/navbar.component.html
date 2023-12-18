@@ -5,13 +5,6 @@
     <li><a class="btn btn-transparent" type="button" href="/parceiros">Seja nosso parceiro</a></li>
     <li *ngIf="!userLogged"><a class="btn btn-login" type="button" href="/login">Entrar</a></li>
     <li *ngIf="userLogged">
-      <!-- <span>
-          <img src="../../../assets/user_logo.png" width="45">
-        </span>
-        <ul class="list-group">
-          <li class="list-group-item">Meus Anúncios</li>
-          <li class="list-group-item">Sair</li>
-        </ul> -->
       <app-user-dropdown></app-user-dropdown>
     </li>
   </ul>
