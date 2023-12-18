@@ -12,9 +12,7 @@ import { map } from 'rxjs';
 })
 export class AppComponent {
   serverCondition$ = this.actRoute.paramMap.pipe(
-    // for direct comparison
     map(params => console.log(params))
-    // or for a network request result
 );
   constructor(
     private contexts: ChildrenOutletContexts,

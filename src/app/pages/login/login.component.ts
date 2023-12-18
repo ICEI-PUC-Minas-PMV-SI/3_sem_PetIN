@@ -32,7 +32,9 @@ export class LoginComponent {
       next: ({ status, data, error }) => {
         if (status >= 200 && status < 300) {
           this.toastr.success('Bem-vindo!', 'Sucesso');
-          this.router.navigateByUrl('/anuncios');
+          this.router.navigateByUrl('/anuncios').then(() => {
+            window.location.reload();
+          });
         } else {
           throw error;
         }
